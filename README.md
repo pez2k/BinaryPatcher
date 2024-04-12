@@ -13,6 +13,8 @@ Usage: `BinaryPatcher <bpatch script> <target file>`
 
 `w` - Write, overwriting bytes at cursor position. Requires one or more arguments denoting the byte values to write, in order.
 
+`z` - Zero bytes from the cursor position onwards. Requires one argument denoting the number of bytes to set to zero.
+
 `l` - Loop, executing the previous command multiple times. Requires one argument denoting the number of times to run the single previous command. Loop commands cannot be looped.
 
 All argument values are required to be hexadecimal numbers without any prefix.

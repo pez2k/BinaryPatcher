@@ -73,11 +73,12 @@ namespace BinaryPatcher
 
             Command? command = parts[0] switch
             {
-                "g" => new GotoCommand(), // Go to a specific address
-                "m" => new MoveCommand(), // Move cursor forwards by n bytes
-                "b" => new BackCommand(), // Move cursor backwards by n bytes
+                "g" => new GotoCommand(),  // Go to a specific address
+                "m" => new MoveCommand(),  // Move cursor forwards by n bytes
+                "b" => new BackCommand(),  // Move cursor backwards by n bytes
                 "w" => new WriteCommand(), // Overwrite bytes at cursor position
-                "l" => new LoopCommand(), // Execute previous command n times
+                "z" => new ZeroCommand(),  // Zero a given number of bytes at cursor position
+                "l" => new LoopCommand(),  // Execute previous command n times
                 _ => null
             };
 
