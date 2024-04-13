@@ -78,6 +78,8 @@ namespace BinaryPatcher
                 "b" => new BackCommand(),         // Move cursor backwards by n bytes
                 "p" => new PatternMatchCommand(), // Find the specified pattern and move to the start of it
                 "w" => new WriteCommand(),        // Overwrite bytes at cursor position
+                "a" => new AddCommand(),          // Add the given value to the byte at the cursor position
+                "s" => new SubtractCommand(),     // Subtract the given value from the byte at the cursor position
                 "z" => new ZeroCommand(),         // Zero a given number of bytes at cursor position
                 "l" => new LoopCommand(),         // Execute previous command n times
                 "i" => new InsertFileCommand(),   // Insert the contents of a file at cursor position, overwriting
