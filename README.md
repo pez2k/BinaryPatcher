@@ -17,6 +17,8 @@ Usage: `BinaryPatcher <bpatch script> <target file>`
 
 `l` - Loop, executing the previous command multiple times. Requires one argument denoting the number of times to run the single previous command. Loop commands cannot be looped.
 
+`i` - Insert the contents of another file at the cursor position, overwriting the current data. Requires one argument denoting the filename to insert. Optionally has a second argument specifying how many bytes of that file to insert, beginning from the start of the file.
+
 All argument values are required to be hexadecimal numbers without any prefix.
 
 Only one command per line is supported. Blank lines and comments are allowed, with suggested comment prefixes of `//`, `--`, or `#`. Multi-line comments require a prefix on all lines.
