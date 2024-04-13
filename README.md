@@ -11,6 +11,8 @@ Usage: `BinaryPatcher <bpatch script> <target file>`
 
 `b` - Move cursor backwards. Requires one argument denoting the distance in bytes.
 
+`p` - Find a pattern match, moving to the start of the first match at or after the cursor position. Requires one or more arguments denoting the byte values to find, in order. The following tokens are accepted as single byte wildcards: `?`, `??`, `*`, `**`.
+
 `w` - Write, overwriting bytes at cursor position. Requires one or more arguments denoting the byte values to write, in order.
 
 `z` - Zero bytes from the cursor position onwards. Requires one argument denoting the number of bytes to set to zero.

@@ -27,7 +27,7 @@ namespace BinaryPatcher.Commands
                 parsedData.Add(parsedValue);
             }
 
-            if (parsedData.Count < 0)
+            if (parsedData.Count <= 0)
             {
                 throw new MissingArgumentsException();
             }

@@ -73,13 +73,14 @@ namespace BinaryPatcher
 
             Command? command = parts[0] switch
             {
-                "g" => new GotoCommand(),       // Go to a specific address
-                "m" => new MoveCommand(),       // Move cursor forwards by n bytes
-                "b" => new BackCommand(),       // Move cursor backwards by n bytes
-                "w" => new WriteCommand(),      // Overwrite bytes at cursor position
-                "z" => new ZeroCommand(),       // Zero a given number of bytes at cursor position
-                "l" => new LoopCommand(),       // Execute previous command n times
-                "i" => new InsertFileCommand(), // Insert the contents of a file at cursor position, overwriting
+                "g" => new GotoCommand(),         // Go to a specific address
+                "m" => new MoveCommand(),         // Move cursor forwards by n bytes
+                "b" => new BackCommand(),         // Move cursor backwards by n bytes
+                "p" => new PatternMatchCommand(), // Find the specified pattern and move to the start of it
+                "w" => new WriteCommand(),        // Overwrite bytes at cursor position
+                "z" => new ZeroCommand(),         // Zero a given number of bytes at cursor position
+                "l" => new LoopCommand(),         // Execute previous command n times
+                "i" => new InsertFileCommand(),   // Insert the contents of a file at cursor position, overwriting
                 _ => null
             };
 
