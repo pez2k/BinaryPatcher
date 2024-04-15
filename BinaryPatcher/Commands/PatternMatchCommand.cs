@@ -45,7 +45,6 @@ namespace BinaryPatcher.Commands
         public override void ApplyToFileStream(Stream file)
         {
             long position = file.Position;
-            long originalPosition = position;
             int patternLength = pattern.Length;
             while (file.Position + patternLength <= file.Length)
             {
@@ -71,8 +70,7 @@ namespace BinaryPatcher.Commands
                 file.Position = position;
             }
 
-            Console.WriteLine("Warning: Pattern not matched.");
-            file.Position = originalPosition;
+            throw new Exception("Pattern not matched, aborting script.");
         }
     }
 }
